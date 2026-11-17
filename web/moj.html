@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Javascript Embedding Methods</title>
+<script>
+function internalMessage() {
+document.getElementById("internal").innerHTML = "This is internal Javascript.";
+}
+</script>
+<script src="script.js"></script>
+</head>
+<body>
+<h1>Different Methods of Embedding Javascript</h1>
+<button onclick="document.getElementById('inline').innerHTML = 'This is Inline Javascript.'">Inline javascript</button>
+<p id="inline"></p>
+<button onclick="internalMessage()">internal Javascript</button>
+<p id="internal"></p>
+<button onclick="externalMessage()">External javascript</button>
+<p id="external"></p>
+</body>
+</html>

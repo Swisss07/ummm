@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rollover Menu</title>
+    <style>
+        body {
+            font-family: Arial;
+        }
+        .menu {
+            width: 200px;
+            padding: 15px;
+            margin: 10px;
+            background-color: lightgray;
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function mouseOver(element) {
+            element.style.backgroundColor = "blue";
+            element.style.color = "white";
+        }
+        
+        function mouseOut(element) {
+            element.style.backgroundColor = "lightgray";
+            element.style.color = "black";
+        }
+    </script>
+</head>
+<body>
+
+    <div class="menu" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">
+        Home
+    </div>
+    
+    <div class="menu" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">
+        About
+    </div>
+    
+    <div class="menu" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">
+        Services
+    </div>
+    
+    <div class="menu" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">
+        Contact
+    </div>
+
+</body>
+</html>
