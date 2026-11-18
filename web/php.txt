@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My First PHP Page</title>
+</head>
+<body>
+<h2>My First PHP Program</h2>
+<?php
+echo "Hello, Students!";
+?>
+</body>
+</html>
+
+<?php
+$name = "Arun";
+$age = 20;
+$course = "BCA";
+echo "Student Name : ".$name."<br>";
+echo "Age : ".$age."<br>";
+echo "Course : ".$course."<br>";
+?>
+
+<?php
+$a = 10;
+$b = 20;
+echo "Addition : ".($a + $b)."<br>";
+echo "Subtraction : ".($a - $b)."<br>";
+echo "Multiplication : ".($a * $b)."<br>";
+echo "Division : ".($a / $b)."<br>";
+echo "Modulus : ".($a % $b)."<br>";
+?>
+
+<?php
+date_default_timezone_set("Asia/Kolkata");
+if(isset($_COOKIE['last_visit'])) {
+    echo "Last Visited on : ".$_COOKIE['last_visit'];
+} else {
+    echo "Welcome ! This is your first visit.";
+}
+$datetime = date("d-m-Y h:i:s A");
+setcookie("last_visit", $datetime, time() + 3600, "/");
+?>
+
+<?php
+session_start();
+if(isset($_SESSION['count'])) {
+    $_SESSION['count']++;
+} else {
+    $_SESSION['count'] = 1;
+}
+echo "Page Views Count : ".$_SESSION['count'];
+?>
